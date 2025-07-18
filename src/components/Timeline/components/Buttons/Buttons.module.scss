@@ -1,0 +1,70 @@
+@use '../../../../styles/variables.scss' as *;
+
+.buttons {
+	position: relative;
+	z-index: 10;
+	width: 120px;
+	margin-top: 393px;
+	margin-left: 80px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	font-size: 1.4rem;
+	color: $counter-color;
+
+	@media (max-width: 1024px) {
+		position: absolute;
+		bottom: 13px;
+		width: 60px;
+		gap: 10px;
+		margin-top: 0;
+		margin-left: 0;
+	}
+
+	&__button {
+		width: 50px;
+		height: 50px;
+		border: 1px solid $black-blue;
+		border-radius: 50%;
+
+		@media (max-width: 1024px) {
+			width: 25px;
+			height: 25px;
+		}
+
+		&:hover {
+			background-color: white;
+		}
+
+		&:first-child {
+			margin-right: 20px;
+			background-image: url('../../../../assets/icons/arrow.png');
+			background-repeat: no-repeat;
+			background-position: center;
+
+			@media (max-width: 1024px) {
+				background-image: url('../../../../assets/icons/arrowMobile.png');
+				margin-right: 10px;
+			}
+		}
+
+		&:last-child {
+			background-image: url('../../../../assets/icons/arrow.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			transform: rotate(180deg);
+			@media (max-width: 1024px) {
+				background-image: url('../../../../assets/icons/arrowMobile.png');
+			}
+		}
+
+		&:disabled {
+			opacity: 50%;
+			cursor: not-allowed;
+
+			&:hover {
+				background-color: none;
+			}
+		}
+	}
+}

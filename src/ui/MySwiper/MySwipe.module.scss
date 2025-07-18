@@ -1,0 +1,105 @@
+@use '../../styles/variables.scss' as *;
+
+.swiper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	max-width: 1440px;
+	padding: 0 20px 0 20px;
+	margin-top: 56px;
+
+	@media (max-width: 1024px) {
+		max-width: 1024px;
+		margin-top: 10px;
+		padding: 0;
+	}
+
+	&__slide {
+		cursor: grab;
+		user-select: none;
+
+		&:active {
+			cursor: grabbing;
+		}
+
+		&Date {
+			margin-bottom: 15px;
+			display: block;
+			font-family: 'Bebas Neue';
+			font-size: 2.5rem;
+			line-height: 120%;
+			color: $for-gradient-blue;
+
+			@media (max-width: 1024px) {
+				font-size: 1.6rem;
+			}
+		}
+
+		&Description {
+			display: block;
+			height: 90px;
+			font-size: 2rem;
+			line-height: 30px;
+			color: $black-blue;
+
+			@media (max-width: 1024px) {
+				height: 80px;
+				font-size: 1.4rem;
+				line-height: 145%;
+			}
+		}
+	}
+
+	&__button {
+		position: relative;
+		z-index: 10;
+		min-width: 40px;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: white;
+		box-shadow: 0px 0px 15px 0px $blue-pagination;
+		background-image: url('../../assets/icons/arrowSwiper.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+
+		@media (max-width: 1024px) {
+			display: none;
+		}
+
+		&:first-child {
+			transform: rotate(180deg);
+		}
+
+		&:disabled {
+			visibility: hidden;
+		}
+	}
+}
+
+:global(.custom-pagination) {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 103px;
+
+	@media (min-width: 1025px) {
+		display: none;
+	}
+}
+
+:global(.custom-pagination .swiper-pagination-bullet) {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: $blue-pagination-active;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+:global(.custom-pagination .swiper-pagination-bullet-active) {
+	background-color: $black-blue;
+	width: 6px;
+	height: 6px;
+}
