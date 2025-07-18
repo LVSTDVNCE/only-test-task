@@ -1,8 +1,7 @@
-import React from 'react';
 import { useEffect, useRef, useState } from 'react';
-import { Button } from '../../../../ui/Button/Button';
-import { calculatePosition } from '../../../../helpers/calculatePosition';
-import type { TimeSegment } from '../../../../types/types';
+import { Button } from '@/ui';
+import { calculatePosition } from '@/helpers/calculatePosition';
+import { TimeSegment } from '@/types/types';
 import gsap from 'gsap';
 import * as styles from './Circle.module.scss';
 

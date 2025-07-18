@@ -1,4 +1,3 @@
-import React from 'react';
 import { forwardRef, type ReactNode } from 'react';
 
 type TButtonProps = {

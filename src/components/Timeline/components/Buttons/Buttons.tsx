@@ -1,6 +1,5 @@
-import React from 'react';
-import { Button } from '../../../../ui/Button/Button';
-import type { TimeSegment } from '../../../../types/types';
+import { Button } from '@/ui';
+import { TimeSegment } from '@/types/types';
 import * as styles from './Buttons.module.scss';
 
 type TButtonsProps = {

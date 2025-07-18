@@ -12,10 +12,13 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(ts|js)x?$/,
+				test: /\.(ts|tsx)$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
+					options: {
+						presets: [['@babel/preset-react', { runtime: 'automatic' }]],
+					},
 				},
 			},
 			{
@@ -46,6 +49,9 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js', '.jsx'],
+		alias: {
+			'@': path.resolve(__dirname, 'src'),
+		},
 	},
 	plugins: [
 		new HtmlWebpackPlugin({

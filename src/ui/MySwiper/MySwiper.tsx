@@ -1,10 +1,9 @@
-import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 import { Button } from '../Button/Button';
-import type { TimeSegment } from '../../types/types';
+import { TimeSegment } from '@/types/types';
 import gsap from 'gsap';
 import * as styles from './MySwipe.module.scss';
 import 'swiper/scss';

@@ -1,10 +1,8 @@
-import React from 'react';
 import { useState } from 'react';
 import { Circle } from './components/Circle/Circle';
 import { Buttons } from './components/Buttons/Buttons';
-import { MySwiper } from '../../ui/MySwiper/MySwiper';
-import { Divider } from '../../ui/Divider/Divider';
-import type { TimeSegment } from '../../types/types';
+import { Divider, MySwiper } from '@/ui';
+import { TimeSegment } from '@/types/types';
 import * as styles from './Timeline.module.scss';
 
 type TimelineProps = {
